@@ -1,5 +1,8 @@
 <% if  current_user %>
-	<h3>Welcome to your BeersBook Feed, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
+	<h3>Welcome to the BeersBook Feed, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
+	<!-- Begin Feed Here -->
+
 <% else %>
+<!-- User not logged in? Show Home Page -->
 	<h1>Welcome to BeersBook</h1>
 <% end %>

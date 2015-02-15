@@ -65,3 +65,13 @@ body{
     color: #468847;
     text-align: left;
  }
+
+ .navbar-header img {
+    height: 50px;
+    width: 50px;
+ }
+
+ .navbar-header span {
+    color: white;
+    font-size: 20px;
+ }
