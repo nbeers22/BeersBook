@@ -1,0 +1,8 @@
+<ul style="list-style-type: none;">
+	<% @posts.each do |post| %>
+				<%= gravatar_in_post(post.user.email.downcase) %>
+				<li><%= post.user.first_name %> <%= post.user.last_name %></li>
+				<li><%= post.content %></li>
+				<hr>
+	<% end %>
+</ul>

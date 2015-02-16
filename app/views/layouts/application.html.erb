@@ -22,9 +22,12 @@
 					</button>
 				</div>
 
-		      	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 				<ul class="nav navbar-nav navbar-right">
+					<% if user_signed_in? %>
+						<li class="name"><%= gravatar_for(current_user) %> <%= "#{current_user.first_name} #{current_user.last_name}" %></li>
+					<% end %>
 				  <li><a href="/">Home</a></li>
 				  <% if user_signed_in? %>
 				    <li><a href="/users/edit">Account</a></li>
