@@ -26,6 +26,14 @@
 
 body{
 	padding-top: 100px;
+    background-color: #B2B2FF;
+}
+
+.post-box {
+    background-color: #FFFF99;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .gravatar {

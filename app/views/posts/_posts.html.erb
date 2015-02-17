@@ -1,8 +1,13 @@
-<ul style="list-style-type: none;">
-	<% @posts.each do |post| %>
+<% @posts.each do |post| %>
+	<div class="row post-box">
+		<div class="col-sm-12">
+			<div class="col-sm-3 ">
+				<%= post.user.first_name %> <%= post.user.last_name %><br>
 				<%= gravatar_in_post(post.user.email.downcase) %>
-				<li><%= post.user.first_name %> <%= post.user.last_name %></li>
-				<li><%= post.content %></li>
-				<hr>
-	<% end %>
-</ul>
+			</div>
+			<div class="col-sm-9">
+				<%= post.content %>
+			</div>
+		</div>
+	</div>
+<% end %>
