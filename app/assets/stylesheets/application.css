@@ -15,25 +15,47 @@
  *= require_tree .
  */
 
- @font-face {
+ /*@font-face {
    font-family: 'Glyphicons Halflings';
-   src: url('../assets/glyphicons-halflings-regular.eot');
-   src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-        url('../assets/glyphicons-halflings-regular.woff') format('woff'), 
-        url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
-        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
- }
+   src: url('/assets/glyphicons-halflings-regular.eot');
+   src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+        url('/assets/glyphicons-halflings-regular.woff') format('woff'), 
+        url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), 
+        url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+ }*/
 
 body{
 	padding-top: 100px;
-    background-color: #B2B2FF;
+    background-color: #D6D6D6;
 }
 
-.post-box {
-    background-color: #FFFF99;
-    padding: 20px;
+div.post-box div.btn-group button {
+    background-color: #FFFFE0;
+    border-radius: none;
+}
+
+div.post-corner div.btn-group ul {
+    background-color: #FFFFE0;
+    top: 93%;
+}
+
+div.post-box {
+    background-color: #FFFFE0;
+    min-height: 150px;
+    padding: 20px 0;
     margin-bottom: 10px;
     border-radius: 5px;
+    position: relative;
+}
+
+.post-corner {
+    border-top-right-radius: 5px;
+}
+
+.post-box-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .gravatar {
@@ -44,7 +66,7 @@ body{
 .name {
     font-size: 20px;
     color: white;
-    padding-right: 15em;
+    padding-right: 13em;
 }
 
 .text-center {

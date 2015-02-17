@@ -1,5 +1,17 @@
 <% @posts.each do |post| %>
-	<div class="row post-box">
+	<div  id="post_<%= post.id %>" class="row post-box">
+		<% if current_user.id == post.user_id %>
+			<div class="post-corner post-box-arrow">
+				<div class="btn-group">
+				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu pull-right" role="menu">
+				    <li class="pull-left"><%= link_to "Edit Post"  %></li>
+				    <li class="pull-left"><%= link_to "Delete Post", post, method: :delete, remote: true %></li>
+				  </ul>
+				</div>
+			</div>
+		<% end %>
 		<div class="col-sm-12">
 			<div class="col-sm-3 ">
 				<%= post.user.first_name %> <%= post.user.last_name %><br>

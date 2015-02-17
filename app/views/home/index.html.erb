@@ -1,6 +1,10 @@
+<%= link_to new_post_path, remote: true do %>
+	<button class="btn btn-primary">New Post</button>
+<% end %>
+<div id="post-form" style="display:none;"></div>
 <% if current_user %>
 	<!-- Begin Feed Here -->
-	<h3>Feed:</h3>
+
 	<%= render 'posts/posts' %>
 <% else %>
 <!-- User not logged in? Show Home Page -->
